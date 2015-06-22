@@ -7,7 +7,7 @@ import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
 
 import org.nenocom.rengine.BasicWindow;
-import org.nenocom.rengine.WindowEventAdapter;
+import org.nenocom.rengine.event.WindowEventAdapter;
 
 /**
  * @author Antonio Ruiz

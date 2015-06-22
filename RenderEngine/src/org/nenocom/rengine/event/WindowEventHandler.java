@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.nenocom.rengine;
+package org.nenocom.rengine.event;
 
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.GL_TRUE;

@@ -3,8 +3,8 @@
  */
 package org.nenocom.rengine.test;
 
-import org.nenocom.commons.Window;
 import org.nenocom.rengine.BasicWindow;
+import org.nenocom.rengine.Window;
 
 /**
  * @author Antonio Ruiz

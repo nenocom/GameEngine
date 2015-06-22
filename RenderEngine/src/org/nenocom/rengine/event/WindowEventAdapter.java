@@ -1,4 +1,4 @@
-package org.nenocom.rengine;
+package org.nenocom.rengine.event;
 
 public class WindowEventAdapter extends WindowEventHandler{
 	

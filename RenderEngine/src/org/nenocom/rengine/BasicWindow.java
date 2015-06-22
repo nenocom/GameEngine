@@ -4,9 +4,9 @@ import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.system.MemoryUtil.NULL;
 
-import org.nenocom.commons.Window;
 
 
+import org.nenocom.rengine.event.WindowEventHandler;
 import org.lwjgl.opengl.GLContext;
 
 public class BasicWindow implements Window{
