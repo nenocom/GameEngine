@@ -9,4 +9,8 @@ package org.nenocom.commons;
  */
 public interface Window {
 
+	void init();
+
+	long getWindowHandle();
+	
 }
