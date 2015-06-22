@@ -12,5 +12,7 @@ public interface Window {
 	void init();
 
 	long getWindowHandle();
+
+	void close();
 	
 }
