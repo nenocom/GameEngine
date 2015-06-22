@@ -18,7 +18,8 @@ public class BasicWindow implements Window{
 	private long windowHandler;
 	private Thread renderThread;
 	protected WindowEventHandler eventHandler;
-	
+	protected Renderer renderer;
+
 	public BasicWindow(){
 		
 	}
@@ -37,9 +38,10 @@ public class BasicWindow implements Window{
 					glfwSwapInterval(1);
 					
 					initEventHandler();
-					
+					initRenderer();
+					renderer.init();
 					while (glfwWindowShouldClose(windowHandler) == GL_FALSE) {
-						//TODO: render
+						renderer.render();
 						glfwSwapBuffers(windowHandler);
 						glfwPollEvents();
 					}
@@ -48,12 +50,32 @@ public class BasicWindow implements Window{
 						eventHandler.release();
 					}
 					
+					if(renderer != null){
+						renderer.release();
+					}
+					
 					glfwDestroyWindow(windowHandler);
 					glfwTerminate();
 				}
 			});
 			renderThread.start();
 		}
+	}
+
+	protected void initRenderer() {
+		renderer = new Renderer(){
+
+			@Override
+			public void render() {}
+
+			@Override
+			public void release() {}
+
+			@Override
+			public void init() {
+				
+			}
+		};
 	}
 
 	/**
