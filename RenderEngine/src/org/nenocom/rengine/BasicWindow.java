@@ -39,7 +39,7 @@ public class BasicWindow implements Window{
 					
 					initEventHandler();
 					initRenderer();
-					
+					renderer.init();
 					while (glfwWindowShouldClose(windowHandler) == GL_FALSE) {
 						renderer.render();
 						glfwSwapBuffers(windowHandler);
@@ -70,6 +70,11 @@ public class BasicWindow implements Window{
 
 			@Override
 			public void release() {}
+
+			@Override
+			public void init() {
+				
+			}
 		};
 	}
 
